@@ -7,13 +7,52 @@ body {
 /* HEADER  */
 
 .header {
-    background: grey;
     height: 70px;
     margin-bottom: 0;
+    width: 1200px;
+    margin: 0 auto;
 }
+.header > a > img {
+    width: 130px;
+    height: 60px;
+    float: left;
+}
+
+.search-button {
+    margin-top: 10px;
+    float: right;
+}
+.search-button input[type=text] {
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.search-button > form > button {
+    float: right;
+    padding: 10px 10px;
+    margin-top: 4px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+}
+
+.rss {
+    position: absolute;
+    margin-top: 10px;
+    top: 15px;
+    right: 650px;
+}
+
 header > nav > ul {
     text-align: center;
-    background: cornsilk;
+    background: rgb(181, 181, 182);
     margin: 0;
     padding: 0;
 }
@@ -26,7 +65,7 @@ header > nav > ul > li > a {
     padding: 20px;
 	display: block;
     transition: 0.3s all ease;
-    color: black;
+    color:black;
 }
 
 header > nav > ul > li > a:link,
@@ -40,9 +79,13 @@ header > nav > ul > li > a:active {
 	background: #072A3F;
 }
 
+.categories {
+    width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
 .categories > ul {
     text-align: center;
-    background: orange;
     margin: 0;
     padding: 0;
 }
@@ -56,6 +99,7 @@ header > nav > ul > li > a:active {
     padding: 12px;
 	display: block;
     text-decoration: none;
+    color: black;
 }
 .categories > ul > li > a:hover {
    color:red;
@@ -74,12 +118,12 @@ header > nav > ul > li > a:active {
     width: 850px;
     border: 1px solid rgba(0,0,0,0.1);
 }
-.main-news > img {
+.main-news > a > img {
     width: 850px;
     height: 400px;
 }
 .main-news > h3 {
-    padding-left: 10px;
+    padding-left: 15px;
 }
 
 .main-news > h3 > a {
@@ -98,6 +142,7 @@ header > nav > ul > li > a:active {
 
 .main-news-under {
     width: 850px;
+    position: relative;
 }
 .img-under {
    width: 300px;
@@ -107,21 +152,51 @@ header > nav > ul > li > a:active {
     width: 530px;
     float: right;
 }
+.content-under > h4 > a {
+    text-decoration: none;
+    color: black;
+}
+.content-under > h4 > a:hover {
+    color: rgb(231, 109, 109);
+}
 .main-news-under-wrapper {
     clear: both;
     border-top: 1px solid rgba(0,0,0,0.1);
 }
-
-.test {
+.underline {
     clear: both;
     width: 850px;
     border-top: 1px solid rgba(0,0,0,0.3);
 }
+
+.popular-news {
+    position: absolute;
+    width: 300px;
+    bottom: 30px;
+    left: 900px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3px;
+}
+.popular-news h4  {
+    margin-top: 2px;
+}
+
+.popular-news h4 > a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid  rgba(0,0,0,0.25);
+}
+
+.popular-news h4 > a:hover {
+    color: rgb(231, 109, 109);
+}
+
 /* END MAIN NEWS  */
 
 /* SIDEBAR */
 
-.sidebar {
+.latest-news-sidebar {
     position: absolute;
     width: 300px;
     text-align: center;
@@ -146,5 +221,26 @@ header > nav > ul > li > a:active {
     padding: 0;
     margin-top: 5px;
 }
+.sidebar-news > h4 > a {
+    text-decoration: none;
+    color: black;
+}
+.sidebar-news > h4 > a:hover {
+    color: rgb(182, 6, 6);
+}
 
  /* END SIDEBAR */
+
+/* FOOTER */
+
+footer {
+    clear: both;
+    background: grey;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* END FOOTER */
