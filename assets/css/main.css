@@ -235,12 +235,33 @@ header > nav > ul > li > a:active {
 
 footer {
     clear: both;
-    background: grey;
+    background: #e2e2e2;
 }
 
 .footer {
+    text-align: left;
+    padding: 10px;
+}
+
+.social > ul {
     text-align: center;
+}
+
+.social > ul > li {
+    list-style: none;
+    display: inline-block;
+    font-size: 30px;
     padding: 20px;
+}
+
+.social-fb {
+   color: #3b5998;
+}
+.social-tw {
+    color:  #00aced;
+}
+.social-yt {
+    color:  #ff0000;
 }
 
 /* END FOOTER */
