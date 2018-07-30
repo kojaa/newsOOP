@@ -1,0 +1,150 @@
+body {
+	margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER  */
+
+.header {
+    background: grey;
+    height: 70px;
+    margin-bottom: 0;
+}
+header > nav > ul {
+    text-align: center;
+    background: cornsilk;
+    margin: 0;
+    padding: 0;
+}
+header > nav > ul > li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+header > nav > ul > li > a {
+    padding: 20px;
+	display: block;
+    transition: 0.3s all ease;
+    color: black;
+}
+
+header > nav > ul > li > a:link,
+header > nav > ul > li > a:visited {
+	text-decoration: none;
+}
+header > nav > ul > li > a:hover {
+	background: white;
+}
+header > nav > ul > li > a:active {
+	background: #072A3F;
+}
+
+.categories > ul {
+    text-align: center;
+    background: orange;
+    margin: 0;
+    padding: 0;
+}
+
+.categories > ul > li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.categories > ul > li > a {
+    padding: 12px;
+	display: block;
+    text-decoration: none;
+}
+.categories > ul > li > a:hover {
+   color:red;
+}
+/* END HEADER */
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+/* MAIN NEWS  */
+.main-news {
+    width: 850px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.main-news > img {
+    width: 850px;
+    height: 400px;
+}
+.main-news > h3 {
+    padding-left: 10px;
+}
+
+.main-news > h3 > a {
+    color: black;
+    text-decoration: none;
+}
+
+.main-news > h3 > a:hover {
+    text-decoration: none;
+    color: rgb(231, 109, 109);
+}
+
+.main-news > span {
+    background: rgb(98, 98, 207);
+}
+
+.main-news-under {
+    width: 850px;
+}
+.img-under {
+   width: 300px;
+   float: left;
+}
+.content-under {
+    width: 530px;
+    float: right;
+}
+.main-news-under-wrapper {
+    clear: both;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.test {
+    clear: both;
+    width: 850px;
+    border-top: 1px solid rgba(0,0,0,0.3);
+}
+/* END MAIN NEWS  */
+
+/* SIDEBAR */
+
+.sidebar {
+    position: absolute;
+    width: 300px;
+    text-align: center;
+    top: 0px;
+    left: 900px;
+    font-size: 14px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    border-bottom: none;
+}
+.side-head {
+    border-bottom: 1px solid rgba(0,0,0,0.4)
+}
+.sidebar-news {
+    margin-top: 10px;
+    border-bottom: 1px solid rgb(194, 183, 183);
+}
+.sidebar-news > span {
+    color: rgb(231, 109, 109);
+}
+.sidebar-news > h4 {
+    padding: 0;
+    margin-top: 5px;
+}
+
+ /* END SIDEBAR */

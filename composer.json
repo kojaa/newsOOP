@@ -1,0 +1,17 @@
+{
+    "name": "news/app",
+    "description": "news based application",
+    "type": "project",
+    "authors": [
+        {
+            "name": "kojaa",
+            "email": "kojic97stole@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "App\\" : ""
+        }
+    }
+}
