@@ -185,6 +185,12 @@ header > nav > ul > li > a:active {
    width: 300px;
    float: left;
 }
+
+.img-under > a > img {
+    width: 280px;
+    height: 150px;
+ }
+
 .content-under {
     width: 530px;
     float: right;
@@ -209,7 +215,7 @@ header > nav > ul > li > a:active {
 .popular-news {
     position: absolute;
     width: 300px;
-    bottom: 30px;
+    top: 510px;
     left: 900px;
     text-align: center;
     border: 1px solid rgba(0,0,0,0.1);
@@ -229,6 +235,10 @@ header > nav > ul > li > a:active {
     color: rgb(231, 109, 109);
 }
 
+.popular-news a > img {
+    width: 250px;
+    height: 150px;
+}
 /* END MAIN NEWS  */
 
 /* SIDEBAR */
@@ -267,6 +277,53 @@ header > nav > ul > li > a:active {
 }
 
  /* END SIDEBAR */
+
+ /* WORLD NEWS  */
+.world-news > h2 {
+    padding: 0;
+    margin: 0;
+}
+
+ .underline-world {
+    clear: both;
+    width: 550px;
+    border-top: 4px solid rgba(0,0,0,0.7);
+}
+
+.world-news-thumbs {
+    float: left;
+    width: 200px;
+    padding-left: 10px;
+}
+
+.world-news-thumbs > h4 {
+    margin: 0;
+}
+
+.world-news-thumbs > h4 > a {
+    text-decoration: none;
+    color: black;
+}
+.world-news-thumbs > h4 > a:hover {
+    color: rgb(231, 109, 109);
+}
+
+.world-news-thumbs > a > img {
+    width: 200px;
+    height: 150px;
+}
+
+.separator {
+    clear: both;
+}
+/* END WORLD NEWS  */
+
+/* SPORT NEWS  */
+.sport-news {
+    clear: both;
+}
+/* END SPORT NEWS  */
+
 
 /* FOOTER */
 

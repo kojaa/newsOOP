@@ -4,10 +4,16 @@
     use App\Resources\Classes\Queries;
     $sql = new Queries();
 
-    //echo $_SERVER['REMOTE_ADDR'];
-
+  
     include $templatePath.'head.php';
     include $templatePath.'header.php';
+    
+    if(isset($_GET['id']))
+    {
+        echo $_GET['id'];
+
+        echo 'ovde ide single page za kategorije , staviti fazon  "glavnu vest (mozda)" i staviti dosta thumbnaila i gluposti okolo, cisto da se razlikuje od pocetne';
+    }
     include $templatePath.'main_post.php';
     include $templatePath.'latest_news_sidebar.php';
     include $templatePath.'under_main_section.php';

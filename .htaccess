@@ -1,0 +1,7 @@
+RewriteEngine on
+
+<Files index.php>
+    Order deny,allow
+    Deny from all
+    Allow from ::1
+</Files>
