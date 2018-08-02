@@ -42,14 +42,26 @@ class Queries implements DatabaseQueries {
         return $res;
     }
 
-    public function getAllByCategoryAsc($tableName, $catId, $limit){
+    public function getAllByCategoryAsc($tableName, $catId, $rowName){
         $sql = 'SELECT * FROM ' . $tableName. ' WHERE category_id = '. $catId .' ORDER BY '. $rowName. ' ASC';
         $res = $this->db->select($sql);
         return $res;
     }
 
-    public function getAllByCategoryDesc($tableName, $catId, $limit){
+    public function getAllByCategoryDesc($tableName, $catId, $rowName){
         $sql = 'SELECT * FROM ' . $tableName. ' WHERE category_id = '. $catId .' ORDER BY '. $rowName. ' DESC';
+        $res = $this->db->select($sql);
+        return $res;
+    }
+
+    public function getAllByRecommendedAsc($tableName, $rcm, $rowName){
+        $sql = 'SELECT * FROM ' . $tableName. ' WHERE recommended = '. $rcm .' ORDER BY '. $rowName. ' ASC';
+        $res = $this->db->select($sql);
+        return $res;
+    }
+
+    public function getAllByRecommendedDesc($tableName, $rcm, $rowName){
+        $sql = 'SELECT * FROM ' . $tableName. ' WHERE recommended = '. $rcm .' ORDER BY '. $rowName. ' DESC';
         $res = $this->db->select($sql);
         return $res;
     }

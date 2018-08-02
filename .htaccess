@@ -4,4 +4,5 @@ RewriteEngine on
     Order deny,allow
     Deny from all
     Allow from ::1
+    Allow from 127.0.0.1
 </Files>

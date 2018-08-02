@@ -6,12 +6,12 @@
 
     //echo $_SERVER['REMOTE_ADDR'];
 
-    include $templatePath.'head.php';
-    include $templatePath.'header.php';
-    include $templatePath.'main_post.php';
-    include $templatePath.'latest_news_sidebar.php';
-    include $templatePath.'under_main_section.php';
-    include $templatePath.'recommended.php';
-    include $templatePath.'world_section.php';
-    include $templatePath.'sport_section.php';
-    include $templatePath.'footer.php';
+    include $frontIncludesPath.'head.php';
+    include $frontIncludesPath.'header.php';
+    include $frontIncludesPath.'main_post.php';
+    include $frontIncludesPath.'latest_news_sidebar.php';
+    include $frontIncludesPath.'under_main_section.php';
+    include $frontIncludesPath.'recommended.php';
+    include $frontIncludesPath.'world_section.php';
+    include $frontIncludesPath.'sport_section.php';
+    include $frontIncludesPath.'footer.php';

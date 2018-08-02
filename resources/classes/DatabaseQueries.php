@@ -22,6 +22,10 @@ interface DatabaseQueries{
 
     public function getAllWithLimitDesc($tableName, $rowName, $limit);
 
+    public function getAllByRecommendedAsc($tableName, $rcm, $rowName);
+
+    public function getAllByRecommendedDesc($tableName, $rcm, $rowName);
+
     public function getAllByCategoryWithLimitAsc($tableName, $catId, $rowName, $limit);
 
     public function getAllByCategoryWithLimitDesc($tableName, $catId, $rowName, $limit);
