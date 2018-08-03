@@ -30,5 +30,4 @@ interface DatabaseQueries{
 
     public function getAllByCategoryWithLimitDesc($tableName, $catId, $rowName, $limit);
 
-
 }

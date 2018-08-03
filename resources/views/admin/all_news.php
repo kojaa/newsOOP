@@ -1,6 +1,6 @@
  <!-- DataTables Example -->
 
-<button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg">Add News</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg">Add New</button>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -8,8 +8,8 @@
       
 
       <div class="modal-body">
-      <h2>Add news</h2>
-        <form action="" method="POST" enctype="multipart/form-data">
+      <h2>News</h2>
+        <form method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <label for="title" class="col-form-label">Title:</label>
             <input type="text" class="form-control" id="title" name="title">
@@ -22,7 +22,7 @@
        <div class="form-group">
           <label for="picture">Image:</label><br>
           <input type="hidden" name="MAX_FILE_SIZE" value="1000000"/>
-          <input type="file" class="form-control-file" name="pictures" accept="image/*"/>
+          <input type="file" class="form-control-file" name="pictures" id="pictures" accept="image/*"/>
       </div>
 
         </form>
@@ -30,15 +30,13 @@
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Publish</button>
+        <input type="submit" class="btn btn-primary" id="publish" value="Publish">
       </div>
-
 
     </div>
   </div>
 </div>
 <br><br>
-
  <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
@@ -83,6 +81,4 @@
               </div>
             </div>
           </div>
-
         </div>
-        <!-- /.container-fluid -->

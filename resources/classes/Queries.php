@@ -90,5 +90,4 @@ class Queries implements DatabaseQueries {
         return $res;
     }
 
-    
 }
