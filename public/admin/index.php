@@ -68,13 +68,16 @@ include $adminIncludesPath.'admin_footer.php';
         $.ajax({
             type: "POST",
             url: "http://localhost/news/public/admin/test.php",
+            //contentType: 'application/json; charset=utf-8',
             data: {title:title, content:content},
-            dataType: "json",
-            success: function(data) {
-                alert(data);
+            
+            success: function() {
+                $('#modal').modal('hide');
+                $('#show-modal').removeClass('hidden-modal');
+                $('#message').html('News has been published');
             },
             error: function(xhr, status, error) {
-            alert(error);
+            console.log(error)
             }
         });
       });

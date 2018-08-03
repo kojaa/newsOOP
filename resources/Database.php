@@ -3,10 +3,10 @@
 namespace App\Resources;
 class Database {
     
-    public $host = 'localhost';
-    public $user = 'root';
-    public $pass = '';
-    public $name = 'news';
+    private $host = 'localhost';
+    private $user = 'root';
+    private $pass = '';
+    private $name = 'news';
 
     public $conn;
     private static $_instance = null;

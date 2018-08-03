@@ -359,3 +359,7 @@ footer {
 }
 
 /* END FOOTER */
+
+.hidden-modal {
+    display: none;
+}
