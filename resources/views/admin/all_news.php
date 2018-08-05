@@ -9,14 +9,16 @@
 
       <div class="modal-body">
       <h2>News</h2>
-        <form enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <label for="title" class="col-form-label">Title:</label>
-            <input type="text" class="form-control" id="title" name="title">
+            <input type="text" class="form-control" id="title" name="title" required>
+            <span class="text-center text-danger" id="error"></span>
           </div>
           <div class="form-group">
             <label for="content" class="col-form-label">Content:</label>
-            <textarea class="form-control" id="content" name="content" rows="12"></textarea>
+            <textarea class="form-control" id="content" name="content" required></textarea>
+            <span class="text-center text-danger" id="error_content"></span>
           </div>
 
        <div class="form-group">
@@ -66,26 +68,25 @@
 
             <?php
             
-              $res = $sql->getAllDesc('post', 'post_id');
-              while($row = $res->fetch_object()){
-
-            ?>
-
-            <tr>
-              <td><?php echo $row->post_id; ?></td>
-              <td><?php echo substr($row->title, 0 , 40)."..."; ?></td>
-              <td><?php echo substr($row->content, 0 , 100)."..."; ?></td>
-              <td><img src="../../assets/img/<?php echo $row->image; ?>" alt="" width=100></td>
-              <td><?php echo $row->category_id; ?></td>
-              <td>Edit</td>
-              <td>Delete</td>
-            </tr>
-
-            <?php } ?>
-            
+            $res = $sql->getData('SELECT * FROM news_view ORDER BY post_id DESC');
+            foreach($res as $row)
+            {
+              ?>     
+              <tr>
+                <td><?php echo $row->post_id; ?></td>
+                <td><?php echo substr($row->title, 0 , 40)."..."; ?></td>
+                <td><?php echo substr($row->content, 0 , 100)."..."; ?></td>
+                <td><img src="../../assets/img/<?php echo $row->image; ?>" alt="" width=100></td>
+                <td><?php  echo $row->category_name; ?></td>
+                <td><button type="button" class="btn btn-info" id="test-modal" data-toggle="modal"><i class="far fa-edit"></i></button></td>
+                <td>Delete</td>
+              </tr>
+          
+              <?php } ?>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+

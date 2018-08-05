@@ -40,49 +40,47 @@
 <br><br>
 
  <div class="card mb-3">
-            <div class="card-header">
-              <i class="fas fa-table"></i>
-              Sport</div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Title</th>
-                      <th>Content</th>
-                      <th>Image</th>
-                      <th>Category</th>
-                      <th>Edit</th>
-                      <th>Delete</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+  <div class="card-header">
+    <i class="fas fa-table"></i>
+    Sport</div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Image</th>
+            <th>Category</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
 
-                    <?php
-                    
-                      $res = $sql->getAllByCategoryDesc('post', 2, 'post_id');
-                      while($row = $res->fetch_object()){
+<?php
+  $res = $sql->getData('SELECT * FROM news_view WHERE category_id = 2 ORDER BY post_id DESC');
+  foreach($res as $row)
+  {
+?>     
+    <tr>
+      <td><?php echo $row->post_id; ?></td>
+      <td><?php echo substr($row->title, 0 , 40)."..."; ?></td>
+      <td><?php echo substr($row->content, 0 , 100)."..."; ?></td>
+      <td><img src="../../assets/img/<?php echo $row->image; ?>" alt="" width=100></td>
+      <td><?php  echo $row->category_name; ?></td>
+      <td><button type="button" class="btn btn-info" id="test-modal" data-toggle="modal"><i class="far fa-edit"></i></button></td>
+      <td>Delete</td>
+    </tr>
 
-                    ?>
+    <?php } ?>
 
-                    <tr>
-                      <td><?php echo $row->post_id; ?></td>
-                      <td><?php echo substr($row->title, 0 , 40)."..."; ?></td>
-                      <td><?php echo substr($row->content, 0 , 100)."..."; ?></td>
-                      <td><img src="../../assets/img/<?php echo $row->image; ?>" alt="" width=100></td>
-                      <td><?php echo $row->category_id; ?></td>
-                      <td>Edit</td>
-                      <td>Delete</td>
-                    </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
-                    <?php } ?>
-                   
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- /.container-fluid -->
+</div>
+<!-- /.container-fluid -->

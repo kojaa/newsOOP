@@ -47,19 +47,18 @@
 
                   <?php
                   
-                    $res = $sql->getAllDesc('categories', 'category_id');
-                    while($row = $res->fetch_object()){
-
-                  ?>
-
-                  <tr>
-                    <td><?php echo $row->category_id; ?></td>
-                    <td><?php echo $row->name; ?></td>
-                    <td>Edit</td>
-                    <td>Delete</td>
-                  </tr>
-
-                  <?php } ?>
+                  $res = $sql->getData('SELECT * FROM categories ORDER BY category_id DESC');
+                  foreach($res as $row)
+                  {
+                    ?>     
+                    <tr>
+                      <td><?php echo $row->category_id; ?></td>
+                      <td><?php  echo $row->category_name; ?></td>
+                      <td><button type="button" class="btn btn-info" id="test-modal" data-toggle="modal"><i class="far fa-edit"></i></button></td>
+                      <td>Delete</td>
+                    </tr>
+                
+                    <?php } ?>
                    
                   </tbody>
                 </table>

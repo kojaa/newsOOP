@@ -19,7 +19,8 @@ class Database {
             $this->conn->connect_error;
             return false;
         }
-      
+        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+        $this->conn->set_charset("utf8mb4");
     
     }
 
@@ -35,51 +36,54 @@ class Database {
 
     }
 
-    //insert - Create
-    public function insert($query){
+    
 
-        $insert = $this->conn->query($query) or die($this->conn->error);
-        if($insert)
-        {
-            return $insert;
-        }
-        else{
-            return false;
-        }
 
-    }
+    // //insert - Create
+    // public function insert($query){
 
-    //select - Read
-    public function select($query){
+    //     $insert = $this->conn->query($query) or die($this->conn->error);
+    //     if($insert)
+    //     {
+    //         return $insert;
+    //     }
+    //     else{
+    //         return false;
+    //     }
 
-        $result = $this->conn->query($query) or die($this->conn->error);
-        if($result->num_rows > 0)
-        {
-            return $result;
-        }else{
-            return false;
-        }
-    }
+    // }
 
-    //update - Update
-    public function update($query){
+    // //select - Read
+    // public function select($query){
 
-        $update = $this->conn->query($query) or die($this->conn->error);
-        if($update){
-            return $update;
-        }else{
-            return false;
-        }
-    }
+    //     $result = $this->conn->query($query) or die($this->conn->error);
+    //     if($result->num_rows > 0)
+    //     {
+    //         return $result;
+    //     }else{
+    //         return false;
+    //     }
+    // }
 
-    //delete - Delete
-    public function delete($query){
+    // //update - Update
+    // public function update($query){
 
-        $delete = $this->conn->query($query) or die($this->conn->error);
-        if($delete){
-            return $delete;
-        }else{
-            return false;
-        }
-    }
+    //     $update = $this->conn->query($query) or die($this->conn->error);
+    //     if($update){
+    //         return $update;
+    //     }else{
+    //         return false;
+    //     }
+    // }
+
+    // //delete - Delete
+    // public function delete($query){
+
+    //     $delete = $this->conn->query($query) or die($this->conn->error);
+    //     if($delete){
+    //         return $delete;
+    //     }else{
+    //         return false;
+    //     }
+    // }
 }

@@ -61,23 +61,21 @@
 
                     <?php
                     
-                      $res = $sql->getAllByRecommendedDesc('post', 1, 'post_id');
-                      while($row = $res->fetch_object()){
-
-                    ?>
-
-                    <tr>
-                      <td><?php echo $row->post_id; ?></td>
-                      <td><?php echo substr($row->title, 0 , 40)."..."; ?></td>
-                      <td><?php echo substr($row->content, 0 , 100)."..."; ?></td>
-                      <td><img src="../../assets/img/<?php echo $row->image; ?>" alt="" width=100></td>
-                      <td><?php echo $row->category_id; ?></td>
-                      <td>Edit</td>
-                      <td>Delete</td>
-                    </tr>
-
-                    <?php } ?>
-                   
+                    $res = $sql->getData('SELECT * FROM news_view WHERE recommended = 1');
+                    foreach($res as $row)
+                    {
+                      ?>     
+                      <tr>
+                        <td><?php echo $row->post_id; ?></td>
+                        <td><?php echo substr($row->title, 0 , 40)."..."; ?></td>
+                        <td><?php echo substr($row->content, 0 , 100)."..."; ?></td>
+                        <td><img src="../../assets/img/<?php echo $row->image; ?>" alt="" width=100></td>
+                        <td><?php  echo $row->category_name; ?></td>
+                        <td><button type="button" class="btn btn-info" id="test-modal" data-toggle="modal"><i class="far fa-edit"></i></button></td>
+                        <td>Delete</td>
+                      </tr>
+                  
+                      <?php } ?>
                   </tbody>
                 </table>
               </div>

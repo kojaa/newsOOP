@@ -2,7 +2,7 @@
   <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Your Website 2018</span>
+              <span>Copyright © News <?php echo date('Y'); ?></span>
             </div>
           </div>
         </footer>
@@ -29,6 +29,10 @@
     <script src="../../assets/vendor/chart.js/Chart.min.js"></script>
     <script src="../../assets/vendor/datatables/jquery.dataTables.js"></script>
     <script src="../../assets/vendor/datatables/dataTables.bootstrap4.js"></script>
+     <!-- Include JS file. -->
+     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.4/js/froala_editor.min.js'></script>
+
+     <script src="../../assets/vendor/js/js-ajax.js"></script>
 
   </body>
 
