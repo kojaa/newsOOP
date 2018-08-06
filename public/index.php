@@ -4,8 +4,6 @@
     use App\Resources\Classes\Queries;
     $sql = new Queries();
 
-    //echo $_SERVER['REMOTE_ADDR'];
-
     include $frontIncludesPath.'head.php';
     include $frontIncludesPath.'header.php';
     include $frontIncludesPath.'main_post.php';

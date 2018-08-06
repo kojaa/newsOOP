@@ -5,8 +5,8 @@
 
         <?php
         
-        $res = $sql->getAllByCategoryWithLimitDesc('post', 3, 'post_id', 4);
-        while($row = $res->fetch_object()){
+        $res = $sql->getData('SELECT * FROM news_view WHERE category_id = 3 ORDER BY post_id DESC LIMIT 4');
+        foreach($res as $row) {
 
         ?>
 

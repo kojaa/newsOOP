@@ -18,7 +18,7 @@ $(function() { $('textarea').froalaEditor({heightMin: 420,heightMax: 600});});
     } else {
         $.ajax({
         type: "POST",
-        url: "http://localhost/news/public/admin/test.php",
+        url: "http://localhost/news/public/admin/add.php",
         data: {title:title, content:content},
         cache : false,
         success: function() {

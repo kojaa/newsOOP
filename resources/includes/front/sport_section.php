@@ -5,11 +5,10 @@
 
        <?php
         
-        $res = $sql->getAllByCategoryWithLimitDesc('post', 2, 'post_id', 4);
-        while($row = $res->fetch_object()){
+        $res = $sql->getData('SELECT * FROM news_view WHERE category_id = 2 ORDER BY post_id DESC LIMIT 4');
+        foreach($res as $row) {
 
         ?>
-
         <div class="world-news-thumbs">
             <a href=""><img src="../assets/img/<?php echo $row->image; ?>" alt=""></a>
             <h4><a href="<?php echo $row->post_id; ?>"><?php echo $row->title; ?></a></h4>

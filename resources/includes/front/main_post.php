@@ -1,9 +1,7 @@
 <?php
 
-$res = $sql->getAllWithLimitDesc('post','post_id', 1);
-
-$row = $res->fetch_object();
-
+$res = $sql->getData('SELECT * FROM news_view ORDER BY post_id DESC LIMIT 1');
+foreach($res as $row);
 ?>
 <div class="wrapper">
 <section>

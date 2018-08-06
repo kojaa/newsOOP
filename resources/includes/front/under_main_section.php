@@ -2,8 +2,8 @@
         <div class="main-news-under">
         <?php
 
-            $res = $sql->getAllWithLimitDesc('post','post_id', 4);
-            while($row = $res->fetch_object()){
+            $res = $sql->getData('SELECT * FROM news_view ORDER BY post_id DESC LIMIT 4');
+            foreach($res as $row) {
         ?>
 
         <div class="main-news-under-wrapper">

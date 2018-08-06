@@ -26,9 +26,9 @@
     <div class="categories">
         <ul>
             <?php
-                $res = $sql->getAll('categories');
-                while($row = $res->fetch_object()){
-                    echo "<li><a href='category.php?id={$row->category_id}'> $row->name</a></li>";
+                $res = $sql->getData('SELECT * FROM categories');
+                foreach($res as $row) {
+                    echo "<li><a href='category.php?id={$row->category_id}'> $row->category_name</a></li>";
                 }
             ?>
         </ul>
