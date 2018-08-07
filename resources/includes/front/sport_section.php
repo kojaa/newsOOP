@@ -10,7 +10,7 @@
 
         ?>
         <div class="world-news-thumbs">
-            <a href=""><img src="../assets/img/<?php echo $row->image; ?>" alt=""></a>
+            <a href=""><img src="../assets/img/<?php echo $row->main_image; ?>" alt=""></a>
             <h4><a href="<?php echo $row->post_id; ?>"><?php echo $row->title; ?></a></h4>
         </div>
 

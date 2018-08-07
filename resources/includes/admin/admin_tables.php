@@ -68,7 +68,7 @@
                       <td><?php echo $row->post_id; ?></td>
                       <td><?php echo substr($row->title, 0 , 40)."..."; ?></td>
                       <td><?php echo substr($row->content, 0 , 100)."..."; ?></td>
-                      <td><img src="../../assets/img/<?php echo $row->image; ?>" alt="" width=100></td>
+                      <td><img src="../../assets/img/<?php echo $row->main_image; ?>" alt="" width=100></td>
                       <td><?php echo $row->category_id; ?></td>
                     </tr>
 

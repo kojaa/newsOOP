@@ -8,7 +8,7 @@
 
         <div class="main-news-under-wrapper">
                 <div class="img-under">
-                <a href=""><img src="../assets/img/<?php echo $row->image ?>" alt=""></a>
+                <a href=""><img src="../assets/img/<?php echo $row->main_image ?>" alt=""></a>
             </div>
             <div class="content-under">
                 <h4><a href="<?php echo $row->post_id; ?>"><?php echo $row->title; ?></a></h4>
