@@ -26,14 +26,11 @@ class Queries implements DatabaseQueries {
 
     public function insertNews() {
 
-        $stmt = $this->db->conn->prepare("INSERT INTO post (title, content, image, cat_id) VALUES (?, ?, ?, ?)");
+        $stmt = $this->db->conn->prepare("INSERT INTO post (title, content, main_image, cat_id) VALUES (?, ?, ?, ?)");
         $s = '1.jpg';
         $i = 2;
         $stmt->bind_param("sssi", htmlentities($_POST['title']), htmlentities($_POST['content']), $s, $i);
         $stmt->execute();
     }
-
-    
-
 
 }
